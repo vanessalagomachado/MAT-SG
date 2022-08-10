@@ -89,13 +89,11 @@ public class MATSG {
     private float threshold_rv; //To define relevant values in rank values, which values in rank are representative
 
     /**
-     *
+     * Method to perform all methods in order to summarize input MATs into a representative MAT.
      * @param spatialT Spatial Treshhold
      * @param file name of file
      * @param ext extension of file
      * @throws IOException
-     *
-     * function to
      *
      */
     public void execute(String dir, String file, String ext, String[] lstCategoricalPD, String SEPARATOR, String[] valuesNULL, int numberSpatialDistance, float rc, float threshold_rv) throws IOException, ParseException {

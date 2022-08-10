@@ -39,7 +39,7 @@ import java.util.stream.Stream;
  */
 public class MATSG {
 
-        // setting to execute method
+    // setting to execute method
     String SEPARATOR;
     String[] valuesNulls;
     // --------------------- AUX ----------------------
@@ -47,57 +47,52 @@ public class MATSG {
     private static int rId;
     private static int cId;
     int ord;
-
     private static String auxTid;
+    private static SimpleDateFormat formatDate = new SimpleDateFormat("dd/MM/yyyy HH:mm");
+    private static DecimalFormat df = new DecimalFormat("###.######");
 
     // -- Load
-    private static List<Point> points;
-    private static List<Attribute> attributes;
-    private static Map<String, BitSet> spatialCellGrid;
-    private static Map<String, List<Double>> sematicNumericFusionVal;
-//        private static Map<String, Integer> sematicFusionCount;
-    private static Map<String, Map<String, Integer>> sematicCategoricalFusionVal;
+    // For loading information from the dataset
+    private static List<Point> points; //Points to be analysed
+    private static List<Attribute> attributes; //List of all diferent attributes found in the dataset
+    private static Map<String, BitSet> spatialCellGrid; //Spatial grid array
+    private static Map<String, List<Double>> sematicNumericFusionVal;  //Sum of each type of numerical attribute
+    private static Map<String, Map<String, Integer>> sematicCategoricalSummarizationVal; //Sum of ocorrunces os each categorical attribute
 
-    // ------------- to Spatial division
-    private static String filename;
-    private static String directory;
-    private static String extension; // Of the filename
-    
-    private static double spatialThreshold;
-//	private static int temporalThreshold;
-    private static double cellSizeSpace;
-    private static int valueZ;
+    // ------------- to Spatial division -- Dataset file information
+    private static String filename; //Filename of the dataset
+    private static String directory;//Directory of the dataset
+    private static String extension; //Extension of the filename
 
-    private static MultipleAspectTrajectory trajectory;
-    private static List<MultipleAspectTrajectory> listaTrajetorias;
+    // To create the Spatial division    
+    private static double spatialThreshold; //Maximum possible size for a cell
+    private static double cellSizeSpace; //Size of each cell
+    private static int valueZ; //Determines how many times the average dispersion of points will the cell size measure
 
-    private static MultipleAspectTrajectory representativeTrajectory;
+    // To model trajectory data
+    private static MultipleAspectTrajectory trajectory; //Contain all points of a MAT
+    private static List<MultipleAspectTrajectory> listTrajectories; //List of all MATs in the dataset
+    private static MultipleAspectTrajectory representativeTrajectory; //Summarized MAT
 
-    // -------------- to Temporal fusion
-    private List<Integer> listTimesInCell;
+    // To create the Temporal summarization
+    private List<Integer> listTimesInCell; //List of all time marks in a cell 
 
-
-    // ------------- to Spatial fusion
+    // To create the Spatial summarization
     private double avgX, avgY;
-    
-    /// --------------- to determine categoricals values pre-defined
-    List<String> lstCategoricalsPD;
-    
-       
-    // --- Define initial index value to semantic attributes
-    
-    private static int INDEX_SEMANTIC = 4;
-    private static SimpleDateFormat formatDate = new SimpleDateFormat("dd/MM/yyyy HH:mm");
-    
-    //V9 - parameters to MAT-SG
-    private float threshold_rc;
-    private float threshold_rv;
-    
 
-    //methods load e add were static and I remove this.
+    // --------------- to determine categoricals pre-defined values
+    List<String> lstCategoricalsPD;
+
+    // --- Define initial index value to semantic attributes
+    private static int INDEX_SEMANTIC = 4;
+
+    //V9 - parameters to MAT-SG
+    private float threshold_rc; //To define relevant cells 
+    private float threshold_rv; //To define relevant values in rank values, which values in rank are representative
+
     /**
      *
-     * @param spatialT Spatial Trashhold
+     * @param spatialT Spatial Treshhold
      * @param file name of file
      * @param ext extension of file
      * @throws IOException
@@ -106,6 +101,8 @@ public class MATSG {
      *
      */
     public void execute(String dir, String file, String ext, String[] lstCategoricalPD, String SEPARATOR, String[] valuesNULL, int numberSpatialDistance, float rc, float threshold_rv) throws IOException, ParseException {
+
+        //initialization of attribute values (Global attributes according to local data)
         directory = dir;
         filename = file;
         extension = ext;
@@ -113,87 +110,72 @@ public class MATSG {
         this.valuesNulls = valuesNULL;
         this.valueZ = numberSpatialDistance;
 
-//        spatialThreshold = computeSpatialThreshold();
-
-        DecimalFormat df = new DecimalFormat("###.######");
-//        cellSizeSpace = spatialThreshold * 0.7071;//Double.parseDouble(df.format(spatialThreshold * 0.7071));
-//        cellSizeSpace = Math.sqrt((spatialThreshold * spatialThreshold)/2);
-
-//        cellSizeSpace = 3;
-        /////////////////////////////// Dúvida: O que representa esse valor? metros?
-
-//        System.out.println("Cell size: " + cellSizeSpace);
-
+        //initialization of aux attributes
         rId = 0;
         auxTid = "-1";
         cId = -1;
 
+        //initialization of aux lists
         listTimesInCell = new ArrayList<Integer>();
-
         spatialCellGrid = new HashMap<String, BitSet>();
-
-
         sematicNumericFusionVal = new HashMap<String, List<Double>>();
-//		sematicFusionCount = new HashMap<String, Integer>();
-        sematicCategoricalFusionVal = new HashMap<String, Map<String, Integer>>();
-//        
+        sematicCategoricalSummarizationVal = new HashMap<String, Map<String, Integer>>();
         points = new ArrayList<Point>();
         attributes = new ArrayList<Attribute>();
-        listaTrajetorias = new ArrayList<MultipleAspectTrajectory>();
-        representativeTrajectory = new MultipleAspectTrajectory("representative");
-        
+        listTrajectories = new ArrayList<MultipleAspectTrajectory>();
+
         lstCategoricalsPD = Arrays.asList(lstCategoricalPD);
-        
 
-        load();
-        
-        spatialThreshold = computeSpaceThreshold()*valueZ;
-        cellSizeSpace = spatialThreshold * 0.7071;//Double.parseDouble(df.format(spatialThreshold * 0.7071));
-//        cellSizeSpace = Math.sqrt((spatialThreshold * spatialThreshold)/2);
-//        System.out.println("Threshold: "+spatialThreshold+" - Cell Size: "+cellSizeSpace);
-        allocateAllPointsInCellSpace();
-//        System.out.println("Cell Grid: "+spatialCellGrid);
-        
-        //parameter for defining representativeness values and compute relevant cell
+        //initialization of object of MAT as representative MAT
+        representativeTrajectory = new MultipleAspectTrajectory("representative");
+
+        load(); // Load dataset follow data model representation
+
+        spatialThreshold = computeSpatialThreshold() * valueZ; // Calculates the spatial threshold according with the informed z
+        cellSizeSpace = spatialThreshold * 0.7071; // Calcultes size of the cells
+        allocateAllPointsInCellSpace(); // Distributes all points in the spatial grid
+
+        //Parameter for defining representativeness values and compute relevant cell
         this.threshold_rv = threshold_rv;
-        threshold_rc = rc>0.0?(rc*points.size()):2;
-//        System.out.println("Threshold RC = "+threshold_rc);
+        //rc is defined as the minimun number of points ( calculated by the % of all points) that should have in each cell
+        threshold_rc = rc > 0.0 ? (rc * points.size()) : 2; //If rc is greater than zero sets threshold according with number of points, else sets to 2
 
-        findCentroid();
+        findCentroid(); //Creates the representative trajectory
 
-//        System.out.println("Logical Grid:\n" + spatialCellGrid);
-        
-        //Write the Representative Trajectory on file
-        writeRepresentativeTrajectory("..\\"+directory+filename+"[output] - z"+this.valueZ, ext);
+        //Write the Representative Trajectory to the file
+        writeRepresentativeTrajectory("..\\" + directory + filename + "[output] - z" + this.valueZ, ext);
 
     }
 
     /**
+     * Reads the dataset file and creates the all the MATs
      *
      * @throws IOException
      */
     private void load() throws IOException, ParseException {
-        
+
         java.io.Reader input = new FileReader(directory + filename + extension);
         BufferedReader reader = new BufferedReader(input);
 
         String datasetRow = reader.readLine();
         //To Get the header of dataset
         String[] datasetColumns = datasetRow.split(SEPARATOR);
-//        System.out.println("Line: "+datasetRow);
-        
+
+        //To add all types of attributes in the dataset, specified in the first line
         int order = 0;
         for (String s : Arrays.copyOfRange(datasetColumns, INDEX_SEMANTIC, datasetColumns.length)) {
-            if(lstCategoricalsPD.contains(s.toUpperCase()))
+            if (lstCategoricalsPD.contains(s.toUpperCase())) //If attribute was predefined as categorical
+            {
                 attributes.add(new Attribute(s, order++, SemanticType.CATEGORICAL));
-            else 
+            } else {
                 attributes.add(new Attribute(s, order++));
+            }
 
         }
 
         datasetRow = reader.readLine();
 
-        //EoF - To get the data of dataset of each line
+        //EoF - To get the trajectory data of dataset of each line
         while (datasetRow != null) {
             datasetColumns = datasetRow.split(SEPARATOR);
             addAttributeValues(datasetColumns);
@@ -204,76 +186,98 @@ public class MATSG {
 
     }
 
-
+    /**
+     *
+     * @param attrValues
+     * @throws ParseException
+     */
     private void addAttributeValues(String[] attrValues) throws ParseException {
 
         ++rId; //Id given to each data point 
 
+        //Defines the semantic dimension as all attributes in predefined index to the end of line
         String[] semantics = Arrays.copyOfRange(attrValues, INDEX_SEMANTIC, attrValues.length);
+
+        //All trajectory point follow the pattern:
+        //id trajectory, coordinates (lat long), time, all semantic dimensions...
         
+        // Follow the pattern add each MAT point in relative MAT
         addTrajectoryData(attrValues[0], attrValues[1].split(" "), formatDate.parse(attrValues[2]), semantics);
-//        String[] coord = {attrValues[2], attrValues[3]};
-//        addTrajectoryData(attrValues[0], coord, Integer.parseInt(attrValues[5]), semantics);
-        //allocateInSpaceCell(attrValues[1].split(" "));
 
     }
 
-
+    /**
+     * Add each MAT point in relative MAT object 
+     * -- mapping input data to the model predefined following O.O.
+     * @param tId - Id of MAT
+     * @param coordinates - coordinates of point
+     * @param time - time date of point
+     * @param semantics - semantics attributes of point
+     */
     private void addTrajectoryData(String tId, String[] coordinates, Date time, String[] semantics) {
 
-        if (!tId.equals(auxTid)) {
-            //Usar o cID como um auxiliar para ID das trajetórias, começando no índice 0
-            //++cId;
+        if (!tId.equals(auxTid)) { //IF the MAT is not created
             auxTid = tId;
-            listaTrajetorias.add(new MultipleAspectTrajectory(Integer.valueOf(tId)));
-            trajectory = listaTrajetorias.get(listaTrajetorias.size() - 1);
-
+            listTrajectories.add(new MultipleAspectTrajectory(Integer.valueOf(tId))); //Adds (Create) the new trajectory
+            trajectory = listTrajectories.get(listTrajectories.size() - 1);
         }
 
-        //order: price, weather, type
+        // aux values
         ArrayList<AttributeValue> attrs = new ArrayList<>();
         ord = 0;
-        
         Attribute a;
+        
+        //Organizes the point semantic attributes
         for (String val : semantics) {
             a = findAttributeForOrder(ord++);
-            if(a.getType() != null && a.getType().equals(SemanticType.CATEGORICAL))
-                val = "*"+val; // Use character '*' to force the number value to be a categorical value
-            if(Arrays.asList(valuesNulls).contains(val)){
+            if (a.getType() != null && a.getType().equals(SemanticType.CATEGORICAL)) { //if it is predefined as Categorical
+                val = "*" + val; // Use character '*' to force the number value to be a categorical value
+            }
+            if (Arrays.asList(valuesNulls).contains(val)) { // Define as Unknown null values
                 val = "Unknown";
             }
             attrs.add(new AttributeValue(val, a));
         }
         a = null; //clean memory 
 
+        //Adds the MAT point to current MAT
         trajectory.addPoint(new Point(rId,// para mexer no id do ponto
                 Double.parseDouble(coordinates[0]),
                 Double.parseDouble(coordinates[1]),
                 time,
                 attrs));
-//        System.out.println(trajectory.getLastPoint());
-
+        
+        //Adds current MAT point to list of points
         points.add(trajectory.getLastPoint());
-        
-        
+
     }
 
+    /**
+     * allocate all points of input dataset in spatial cell grid
+     */
+    public void allocateAllPointsInCellSpace() {
+        for (Point p : points) {
+            allocateInSpaceCell(p);
+        }
+    }
 
     /**
-     * add each point of the relative cell in grid
+     * add each point in the relative grid cell
      *
      * @param coordinates Coordinates of each trajectory point
      *
      */
     private static void allocateInSpaceCell(Point p) {
 
-        // x,y
-//        String key = getCellPosition(Double.parseDouble(coordinates[0]), Double.parseDouble(coordinates[1]));
+        //Get x,y of the point in the spatial grid
         String key = getCellPosition(p.getX(), p.getY());
 
+        //Get id of the spatial grid cell
         BitSet rIds = spatialCellGrid.get(key);
 
+        //If the cell doesn't exist
         if (rIds == null) {
+            //Creates the cell and adds to the spatial grid
             rIds = new BitSet();
             rIds.set(p.getrId());
             spatialCellGrid.put(key, rIds);
@@ -281,13 +285,10 @@ public class MATSG {
             rIds.set(p.getrId());
             spatialCellGrid.replace(key, rIds);
         }
-        
-
     }
 
     /**
-     * Compute the cell position based on x and y divided by the cell size
-     * predefined
+     * Compute the cell position based on x and y divided by the cell size predefined (cellSizeSpace)
      *
      * @param x
      * @param y
@@ -299,29 +300,34 @@ public class MATSG {
 
     }
 
+    /**
+     * Compute the representative point of each cell in the spatial grid,
+     * summarizating all aspects
+     */
     public void findCentroid() {
 
         int sizePoints = points.size();
-//        System.out.println("Size of Points: "+sizePoints);
+
+        //Create iterator object of all spatial grid cells
         Iterator<String> cell = spatialCellGrid.keySet().iterator();
         while (cell.hasNext()) {
-            String cellAnalyzed = cell.next();
-//            System.out.println("Cell Analyzed: "+cellAnalyzed);
-//            System.out.println("Points: "+spatialCellGrid.get(cellAnalyzed));
+            String cellAnalyzed = cell.next(); //Selects next cell
 
+            //Gets amount of points in the current cell
             int qntPoints = spatialCellGrid.get(cellAnalyzed).cardinality();
-            
+
             if (qntPoints >= threshold_rc) { // IF number is at least a threshold RC
 
-                resetValuesToSemanticFusion();
-                Centroid representativePoint = new Centroid();
+                resetValuesToSummarization();
+                Centroid representativePoint = new Centroid(); //Creates new representative point
 
                 // Loop in all points of the cell
                 for (int pointId = spatialCellGrid.get(cellAnalyzed).nextSetBit(0);
                         pointId >= 0;
                         pointId = spatialCellGrid.get(cellAnalyzed).nextSetBit(pointId + 1)) {
-//                    
-                    Point p = points.get(pointId-1);
+
+                    //Adds point to representative source point list
+                    Point p = points.get(pointId - 1);
                     representativePoint.addPoint(p); //To mapping the origin of the RP
 
                     // Spatial data
@@ -332,16 +338,14 @@ public class MATSG {
                     Double val;
                     String attrActual;
 
-                    
                     for (AttributeValue atv : p.getListAttrValues()) {
                         attrActual = "" + atv.getAttibute().getOrder();
 
                         // numeric values - median computation 
                         //in this scope just create bitset with sum and count of values foreach quantitative attribute
                         try {
-                            
+
                             val = Double.parseDouble((String) atv.getValue()); // val -1 refers to empty value
-                            
                             if (!sematicNumericFusionVal.containsKey(attrActual)) {
                                 sematicNumericFusionVal.put(attrActual, new ArrayList<Double>());
                             }
@@ -350,45 +354,41 @@ public class MATSG {
                             sematicNumericFusionVal.get(attrActual).add(val);
 
                         } catch (java.lang.NumberFormatException e) { //categorical values
-                            //in this scope create the sematicCategoricalFusionVal with all possible values of each categorical attribute
-                            // and add its ids for after this step can computation the frequency of each one,
-                            // and identify the value more frequency of each qualitative attribute
+                            /*
+                            in this scope create the sematicCategoricalSummarizationVal with all possible values of each categorical attribute
+                             and add its ids for after this step can computation the frequency of each one,
+                             and identify the value more frequency of each qualitative attribute 
+                             */
 
-                            //BitSet pIds;
-                            if (!sematicCategoricalFusionVal.containsKey(attrActual)) //IF not contains this key - attribute name
-                            {
-                                sematicCategoricalFusionVal.put(attrActual, new HashMap<String, Integer>());
+                            //IF not contains this key - attribute name
+                            if (!sematicCategoricalSummarizationVal.containsKey(attrActual)) {
+                                sematicCategoricalSummarizationVal.put(attrActual, new HashMap<String, Integer>());
                             }
 
-                            if (!sematicCategoricalFusionVal.get(attrActual).containsKey(atv.getValue())) // IF this attribute not contains this value
-                            {
-                                sematicCategoricalFusionVal.get(attrActual).put((String) atv.getValue(), 1); //add this value to attribute and initialize the count
+                            // IF this attribute not contains this value
+                            if (!sematicCategoricalSummarizationVal.get(attrActual).containsKey(atv.getValue())) {
+                                sematicCategoricalSummarizationVal.get(attrActual).put((String) atv.getValue(), 1); //add this value to attribute and initialize the count
                             } else {
-                                sematicCategoricalFusionVal.get(attrActual).replace((String) atv.getValue(), sematicCategoricalFusionVal.get(attrActual).get(atv.getValue()) + 1); //cont ++
+                                sematicCategoricalSummarizationVal.get(attrActual).replace((String) atv.getValue(), sematicCategoricalSummarizationVal.get(attrActual).get(atv.getValue()) + 1);
                             }
 
-//                            System.out.println(sematicCategoricalFusionVal.get(attrActual));
                         }
                     } //end FOR of all semantic attributes
 
                     //Temporal data
-//                    avgTemporal += p.getTimeInMinutes();
                     listTimesInCell.add(p.getTimeInMinutes());
-                    
-                    
-                    
-                    
+
                 }// end FOR each point in cell
 
-                //System.out.println("Dados dos pontos: "+sematicNumericFusionVal + " - qnt: "+sematicFusionCount);
-                //Spatial data fusion
+                // spatial summarization
+                //// Calculates average spatial position
                 representativePoint.setSpatialDimension((avgX /= qntPoints), (avgY /= qntPoints));
 
-                //
                 //Loop for numeric attributes
                 sematicNumericFusionVal.entrySet().forEach((entrada) -> {
                     Double median;
                     Collections.sort(entrada.getValue());
+                    //Calculates the median value for all numeric attributes of the representative point
                     if (entrada.getValue().size() % 2 == 0) {
                         median = (entrada.getValue().get(entrada.getValue().size() / 2) + entrada.getValue().get(entrada.getValue().size() / 2 - 1)) / 2;
                     } else {
@@ -397,17 +397,12 @@ public class MATSG {
 
                     representativePoint.addAttrValue("" + median,
                             findAttributeForOrder(Integer.parseInt(entrada.getKey())));
-
-//                   
                 });
 
                 //begin -------- Loop for a categorical attributes
-                //qnt categorical attributes 
-                
-                //System.out.println("Quantidade de attr categorical: "+sematicCategoricalFusionVal.size());
-                
-
-                for (Map.Entry<String, Map<String, Integer>> allCategorical : sematicCategoricalFusionVal.entrySet()) {
+                //To see the size of categorical attributes 
+                //System.out.println("Size of categorical attr: "+sematicCategoricalSummarizationVal.size());
+                for (Map.Entry<String, Map<String, Integer>> allCategorical : sematicCategoricalSummarizationVal.entrySet()) {
 
                     Map<String, Integer> internalCategoricalList
                             = allCategorical.getValue().entrySet()
@@ -415,26 +410,21 @@ public class MATSG {
                                     .sorted(Map.Entry.<String, Integer>comparingByValue().reversed())
                                     .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue,
                                             (oldValue, newValue) -> oldValue, LinkedHashMap::new));
-
-                    representativePoint.addAttrValue(normalizeRankingValues(internalCategoricalList, qntPoints),
+                    //Add mode value (tendency) of attribute to representative point
+                    representativePoint.addAttrValue(normalizeRankingValues(internalCategoricalList, qntPoints, 's'),
                             findAttributeForOrder(Integer.parseInt(allCategorical.getKey())));
-
-//                        System.out.println("Ordered Categorical: "+internalCategoricalList);
                 } // end ------------ Loop for a categorical attributes
 
-                
-
-
                 //Temporal data
-               representativePoint.addAttrValue(normalizeTimeRank(normalizeRankingValues(defineRankingTemporal(listTimesInCell),qntPoints)),
-                       new Attribute("TIME"));
-               
-               
-               representativeTrajectory.addPoint(representativePoint);
-                
-            } //End IF contains more than 1 point in cell
+//                representativePoint.addAttrValue(normalizeTimeRank(normalizeRankingValues(defineRankingTemporal(listTimesInCell), qntPoints)),
+                representativePoint.addAttrValue(normalizeRankingValues(defineRankingTemporal(listTimesInCell), qntPoints, 't'),
+                        new Attribute("TIME"));
+
+                // after add all data in object point, add this representative point into representative MAT 
+                representativeTrajectory.addPoint(representativePoint);
+
+            } //End IF contains more than (RC) point in cell
         } // end loop each cell
-//        System.out.println("Representative traj: " + representativeTrajectory);
     }// End method findCentroid
 
     /**
@@ -452,7 +442,10 @@ public class MATSG {
         return null;
     }
 
-    public void resetValuesToSemanticFusion() {
+    /**
+     * Reset all values of all attributes in MAT
+     */
+    public void resetValuesToSummarization() {
         //Data reset
 
         //spatial data
@@ -462,213 +455,238 @@ public class MATSG {
         // semantic data (multiple aspects)
         sematicNumericFusionVal.clear();
 //                sematicFusionCount.clear();
-        sematicCategoricalFusionVal.clear();
+        sematicCategoricalSummarizationVal.clear();
 
         //temporal data
         listTimesInCell.clear();
     }
-    
-    public Map<String, Integer> defineRankingTemporal(List<Integer> times){
+
+    /**
+     * Computes the summarization of temporal data
+     *
+     * @param times occurence time of all input points in the cell
+     * @return Map -- All STI (Significant Temporal Interval) and the number of
+     * points in relative interval
+     */
+    public Map<String, Integer> defineRankingTemporal(List<Integer> times) {
         //order times
         Collections.sort(times);
-//        System.out.println("Times ordenate: "+times);
-        
-        List<Integer> differences = new ArrayList<>();
-        
+
+        List<Integer> differences = new ArrayList<>(); //List of local time intervals
 
         //determine threshold by avg
-        int threshold = 100;
-        
-        
-        //int countIntervals = 0;
-        float sumIntervals = 0;
+        int threshold = 100; //the predefined threshold used when the time value is less than or equal to 2 occurrences
+
+        //Begin -- Calculates the intervals of time
+        float sumDifferences = 0;
         for (int i = 1; i < times.size(); i++) {
-            differences.add(times.get(i) - times.get(i-1));
-            sumIntervals += differences.get(differences.size()-1);
-            //countIntervals++;
-            
+            differences.add(times.get(i) - times.get(i - 1));
+            sumDifferences += differences.get(differences.size() - 1);
         }
-        
-        float avg = sumIntervals / differences.size();
-        
-        sumIntervals = 0;
-        
-        if(differences.size()>1){
-            
+
+        //Average temporal differences 
+        float avg = sumDifferences / differences.size();
+
+        sumDifferences = 0;
+
+        if (differences.size() > 1) { //IF has more than 2 occurrences
+            //order temporal differences
             Collections.sort(differences);
-//            System.out.println("Intervals list: "+differences);
-            
-        
-            //compute the valid interval to remove the outliers
-            // computation: valid interval Median minus and plus SD.
-            if(differences.size()>2){ 
-                //compute the median value of the difference values 
+
+            /*
+            compute the valid interval to remove the outliers
+             -- computation: valid interval median minus and plus (- / +) SD.
+             */
+            //1st - compute the median value of the difference values
+            if (differences.size() > 2) {
                 int med;
-                if(differences.size()%2 == 1)
-                    med = differences.get(Math.floorDiv(differences.size(),2));
-                else
-                    med = (differences.get(differences.size()/2-1)+differences.get((differences.size()/2))) / 2;
-//                System.out.println("Median: "+med);
-                
-                
-                //Compute the SD
-                for (int i = 0; i < differences.size(); i++) {
-                    sumIntervals += Math.pow((differences.get(i) - avg), 2);
+                if (differences.size() % 2 == 1) {
+                    med = differences.get(Math.floorDiv(differences.size(), 2));
+                } else {
+                    med = (differences.get(differences.size() / 2 - 1) + differences.get((differences.size() / 2))) / 2;
                 }
-                float SD = sumIntervals / differences.size();
-                SD = (float)Math.sqrt(SD);
-                
-                //compute valid interval
-                float lessValue = med - SD;
-                float upperValue = med+ SD;
-//                System.out.println("Less value: "+lessValue+" | Upper value: "+upperValue);
-                
-                threshold = Math.floorDiv((int)(Math.abs(upperValue) - Math.abs(lessValue)), 2);
-//                System.out.println("Interval maximum: "+threshold);
-                
-                //remove outliers
-                sumIntervals = 0;
-                //remove less value
+
+                //2nd - Compute the SD
                 for (int i = 0; i < differences.size(); i++) {
-                    if(differences.get(i) < lessValue || differences.get(i)>upperValue){
+                    sumDifferences += Math.pow((differences.get(i) - avg), 2);
+                }
+                float SD = sumDifferences / differences.size();
+                SD = (float) Math.sqrt(SD);
+
+                //3rd - compute the valid interval (the value of median of temporal differences  minus and plus (- / +) SD)
+                float lessValue = med - SD;
+                float upperValue = med + SD;
+
+                // update threshold value to average value of temporal differences
+                //threshold = Math.floorDiv((int) (Math.abs(upperValue) - Math.abs(lessValue)), 2);
+                //for removing outliers:
+                sumDifferences = 0;
+                //remove values temporal differences less and upper the valid interval defined
+                for (int i = 0; i < differences.size(); i++) {
+                    if (differences.get(i) < lessValue || differences.get(i) > upperValue) {
                         differences.remove(i);
                     } else {
-                        sumIntervals += differences.get(i);
+                        sumDifferences += differences.get(i);
                     }
                 }
-//                System.out.println("Intervals list - valid values: "+differences);
-                threshold = Math.floorDiv((int)sumIntervals, differences.size());
-                
-                
-            } 
-            
+                // update threshold value to average value of temporal differences considering only valid values
+                threshold = Math.floorDiv((int) sumDifferences, differences.size());
+
+            }
         }
-        
-//        System.out.println("Threshold: "+threshold);
-        
+        //End computation of temporal threshold
+
         String aux = null;
         int cont = 1;
         Map<String, Integer> temporalRanking = new HashMap<>();
         for (int i = 0; i < times.size(); i++) {
-            
-                if(i != times.size()-1 && (times.get(i)+threshold) >= times.get(i+1)){
-                    if(aux == null)
-                        aux = ""+times.get(i);
-                    cont++;
-                } else {
-                    if(aux == null)
-                        aux = ""+times.get(i);
-                    else
-                        aux += "-"+times.get(i);
 
-                    temporalRanking.put(aux, cont);
-                    cont = 1;
-                    aux = null;
+            /*
+            IF the occurrence is not the last, 
+            and two consecutive occurrences are considered a significant temporal interval (STI), 
+            considering the threshold value 
+             */
+            if (i != times.size() - 1 && (times.get(i) + threshold) >= times.get(i + 1)) {
+                if (aux == null) {
+                    aux = "" + times.get(i);
                 }
+                cont++;
+                /*
+                IF has only one occurrence, this is add in the rank list or 
+                if the occurence not is more considered into a previous STI 
+                 */
+            } else {
+                if (aux == null) {
+                    aux = "" + times.get(i);
+                } else {
+                    aux += "-" + times.get(i);
+                }
+
+                temporalRanking.put(aux, cont); //add occurrence or STI into rank list
+                //reset aux values
+                cont = 1;
+                aux = null;
             }
-            // Ordernate temporal ranking 
-                temporalRanking
-                            = temporalRanking.entrySet()
-                                    .stream()
-                                    .sorted(Map.Entry.<String, Integer>comparingByValue().reversed())
-                                    .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue,
-                                            (oldValue, newValue) -> oldValue, LinkedHashMap::new));
-                
-                return temporalRanking;
         }
-        
-        public double computeSpaceThreshold(){
-            //compute avg of spatial distance
-            double minDistance = 999999999999999999L;
-            double localDistance;
-            double sumDistance = 0;
-            double avgDistance;
-            for(Point p: points){
-                for (Point q: points) {
-                    if(!p.equals(q)){
-                        localDistance = Util.euclideanDistance(p, q);
-                        if(localDistance < minDistance)
-                            minDistance = localDistance;
+        // Ordernate temporal ranking 
+        temporalRanking
+                = temporalRanking.entrySet()
+                        .stream()
+                        .sorted(Map.Entry.<String, Integer>comparingByValue().reversed())
+                        .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue,
+                                (oldValue, newValue) -> oldValue, LinkedHashMap::new));
+
+        // END -- Calculates the intervals of time
+        return temporalRanking;
+    }
+
+    /**
+     * Compute the average of the minimum spatial distance of the input MATs
+     * points to provide dynamic space segmentation for clustering these input
+     * points. Given set of input MATs, with n points, we compute the Euclidean
+     * distance d() for each point pi ∈ T with the nearest point pk ∈ T.
+     *
+     * @return spatialThreshold -- average of the minimum spatial distance
+     */
+    public double computeSpatialThreshold() {
+
+        double minDistance = 999999999999999999L;
+        double localDistance;
+        double sumDistance = 0;
+        double avgDistance;
+        for (Point p : points) {
+            for (Point q : points) {
+                if (!p.equals(q)) {
+                    localDistance = Util.euclideanDistance(p, q);
+                    if (localDistance < minDistance) {
+                        minDistance = localDistance;
                     }
                 }
-                sumDistance += minDistance;
-//                System.out.println("Point: "+p.getrId()+" - Distance: "+minDistance);
-                minDistance = 999999999999999999L;
-                localDistance = 0;
-                
             }
-//            System.out.println("Média de distância mínima: "+(sumDistance / points.size()));
-            return (sumDistance / points.size());
-            
+            sumDistance += minDistance;
+            minDistance = 999999999999999999L;
+            localDistance = 0;
+
         }
-        
-        public void allocateAllPointsInCellSpace(){
-            for (Point p: points) {
-                allocateInSpaceCell(p);
+        //Returns the average of minimun distance beteween all points
+        return (sumDistance / points.size());
+
+    }
+
+    /**
+     * Writes the generated representative trajectory in a new .csv file
+     *
+     * @param fileOutput -- output file name
+     * @param ext -- Extension of the file (e.g. csv)
+     */
+    public void writeRepresentativeTrajectory(String fileOutput, String ext) {
+        try {
+            CSVWriter mxWriter = new CSVWriter("datasets/" + fileOutput + ext);
+
+            for (Point p : representativeTrajectory.getPointList()) {
+                mxWriter.writeLine(p.toString());
+                mxWriter.flush();
             }
-        }
-        
-        
-        
-        public void writeRepresentativeTrajectory(String fileOutput, String ext){
-            try {
-                                        CSVWriter mxWriter = new CSVWriter("datasets/" + fileOutput+ ext);
-					
-					
-					
-					for(Point p: representativeTrajectory.getPointList()) {
-						mxWriter.writeLine(p.toString());
-						mxWriter.flush();
-					}
-					
-					mxWriter.close();
-				} catch (IOException e) {
+
+            mxWriter.close();
+        } catch (IOException e) {
 //					Logger.log(Type.ERROR, pfx + e.getMessage());
-					e.printStackTrace();
-				}
+            e.printStackTrace();
         }
-        
-        /**
-         * Normalizing the Map of ranking values on semantic or time dimension
-         * - Where the quantity of occurences of each attribute value is changed by 
-         * the ratio of this value relation on the size of the cell
-         * @param mapRank
-         * @param sizeCell
-         * @return normalized 
-         */
-        public Map<Object, Double> normalizeRankingValues(Map<String, Integer> mapRank, int sizeCell) {
-               
-                Map<Object, Double> newMap = new HashMap<>();
-                double trendEachVal;
-                for (Map.Entry<String, Integer> eachValue: mapRank.entrySet()){
-                    trendEachVal = (double)eachValue.getValue()/sizeCell; 
-                    if(trendEachVal >= threshold_rv)
-                        newMap.put(eachValue.getKey(), trendEachVal);
+    }
+
+    /**
+     * For updating the number of occurrences of each rank value by the ratio
+     * value. Normalizing the Rank Value Map in the semantic or temporal
+     * dimension, where the quantity of occurrences of each attribute value is
+     * changed by the ratio of this value in relation to the size of the cell.
+     *
+     * In temporal dimension the minutes values are converted to valid time information.
+     * 
+     * @param mapRank -- currently the Map of ranking values with number of
+     * occurrences for each value
+     * @param sizeCell -- size of points in the cell
+     * @param dimension -- t: temporal and s: semantic
+     * @return normalized -- the Map update with ratio values of occurrences.
+     */
+    public Map<Object, Double> normalizeRankingValues(Map<String, Integer> mapRank, int sizeCell, char dimension) {
+
+        Map<Object, Double> newMap = new HashMap<>();
+        double trendEachVal;
+        for (Map.Entry<String, Integer> eachValue : mapRank.entrySet()) {
+            trendEachVal = (double) eachValue.getValue() / sizeCell;
+            if (trendEachVal >= threshold_rv) {
+                newMap.put(eachValue.getKey(), trendEachVal);
+            }
+        }
+
+        Map<Object, Double> newMapSorted = newMap.entrySet().stream()
+                .sorted(Map.Entry.<Object, Double>comparingByValue().reversed())
+                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue,
+                        (oldValue, newValue) -> oldValue, LinkedHashMap::new));
+
+        if (dimension == 't') { // temporal dimension
+            /*
+            In the temporal dimension, the minutes values are converted to valid time according to the predefined mask.
+            */
+            Map<Object, Double> newTimeMap = new HashMap<>();
+            for (Map.Entry<Object, Double> eachInt : newMapSorted.entrySet()) {
+                String interval = (String) eachInt.getKey();
+                String auxInterval;
+                if (interval.contains("-")) {
+                    auxInterval = formatDate.format(Util.convertMinutesToDate(Integer.parseInt(interval.substring(0, interval.indexOf("-")))));
+                    auxInterval += " - " + formatDate.format(Util.convertMinutesToDate(Integer.parseInt(interval.substring(interval.indexOf("-") + 1))));
+                } else {
+                    auxInterval = formatDate.format(Util.convertMinutesToDate(Integer.parseInt(interval)));
                 }
-                
-                Map<Object, Double> newMapSorted = newMap.entrySet().stream()
-			        .sorted(Map.Entry.<Object, Double>comparingByValue().reversed())
-                                    .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue,
-                                            (oldValue, newValue) -> oldValue, LinkedHashMap::new));
-                
-                return newMapSorted;
+
+                newTimeMap.put(auxInterval, newMap.get(interval));
+            }
+            return newTimeMap;
+        } else { // Semantic dimension
+            return newMapSorted;
         }
-        
-        public Map<Object,Double> normalizeTimeRank(Map<Object,Double> mapTime){
-                Map<Object,Double> newMap = new HashMap<>();
-                for (Map.Entry<Object, Double> eachInt : mapTime.entrySet()){
-                    String interval = (String)eachInt.getKey();
-                    String auxInterval;
-                    if(interval.contains("-")){
-                        auxInterval = formatDate.format(Util.convertMinutesToDate(Integer.parseInt(interval.substring(0, interval.indexOf("-")))));
-                        auxInterval += " - "+formatDate.format(Util.convertMinutesToDate(Integer.parseInt(interval.substring(interval.indexOf("-")+1))));
-                    } else {
-                        auxInterval = formatDate.format(Util.convertMinutesToDate(Integer.parseInt(interval)));
-                    }
-//                    txt+= auxInterval+" > "+formatNumeric.format(((double)eachInt.getValue()/pointListSource.size()))+", ";
-                    newMap.put(auxInterval, mapTime.get(interval));
-                }
-                return newMap;
-        }
-    
+
+    }
+
 }

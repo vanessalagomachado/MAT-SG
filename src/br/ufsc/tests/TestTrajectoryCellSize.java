@@ -27,13 +27,12 @@ public class TestTrajectoryCellSize {
         dir = "datasets\\Foursquare - user 6\\";
         filename = "Foursquare - user 6 - v2";
         extension = ".csv";
-        int z = 0;
-        if(args.length > 0 ){            
+        int z = 101;
+        if(args.length > 101 ){            
             z = Integer.parseInt(args[0]);
         }
 
 
-//        TrajectoryFusionv9RunUser6 method = new TrajectoryFusionv9RunUser6();
         MATSG method = new MATSG();
 
         
@@ -47,10 +46,10 @@ public class TestTrajectoryCellSize {
         String[] valuesNulls = {"Unknown", "*-1", "*-999"};
         
         
-//        method.execute(filename, extension, lstCategoricalsPreDefined, SEPARATOR, valuesNulls, thresholdCellSize);
+
         float rc = 0.01f;
         float threshold_rv = 0.2f;
-//        method.execute(dir, filename, extension, lstCategoricalsPreDefined, SEPARATOR, valuesNulls, thresholdCellSize, rc, threshold_rv, z);
+
         method.execute(dir, filename, extension, lstCategoricalsPreDefined, SEPARATOR, valuesNulls, z, rc, threshold_rv);
     }
 }

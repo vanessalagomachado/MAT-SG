@@ -1,0 +1,226 @@
+tid;lat_lon;date_time;time;day;poi;type;root_type;price;rating;weather;label;checkin_id;venue_id
+126;40.8331652006224 -73.9418603427692;12/11/2012 05:17;317;Monday;The Lair Of Modern Strange Cowboy;Home (private);Residence;-1;-1;Clear;6;283468;4eba3331722edc0eaf1762bb
+126;40.8340978041072 -73.9452672225881;12/11/2012 23:24;1404;Monday;Galaxy Gourmet Deli;Deli / Bodega;Food;1;8.2;Clouds;6;284212;4fe9524ce4b0d971aa120f82
+126;40.8331652006224 -73.9418603427692;13/11/2012 00:00;0;Tuesday;The Lair Of Modern Strange Cowboy;Home (private);Residence;-1;-1;Clouds;6;284225;4eba3331722edc0eaf1762bb
+126;40.7646959283254 -73.8851974964414;15/11/2012 17:49;1069;Thursday;Popeyes Louisiana Kitchen;Fried Chicken Joint;Food;3;6.6;Clear;6;284771;4d5febf914963704def9dd94
+126;40.7660790376824 -73.8835287094116;15/11/2012 18:40;1120;Thursday;MTA Bus Operations Depot - LaGuardia;Bus Station;Travel & Transport;-1;-1;Clear;6;284821;4dd408046365c27b0dbf4239
+126;40.7300987360962 -73.8614527160266;15/11/2012 21:20;1280;Thursday;MTA Subway - 63rd Dr/Rego Park (M/R);Metro Station;Travel & Transport;-1;-1;Clear;6;285008;4c66f1e5aebea5935aab74d0
+126;40.7497034836652 -73.9878129959106;15/11/2012 22:02;1322;Thursday;MTA Subway - 34th St/Herald Sq (B/D/F/M/N/Q/R/W);Metro Station;Travel & Transport;-1;-1;Clear;6;285041;4ad7a8d9f964a520640d21e3
+126;40.6900872257332 -73.9817776229191;15/11/2012 22:30;1350;Thursday;NYCT Transit Survey Unit;Office;Professional & Other Places;-1;-1;Clear;6;285060;4c7f04be7fd4ef3b108394a1
+126;40.8331652006224 -73.9418603427692;16/11/2012 01:30;90;Friday;The Lair Of Modern Strange Cowboy;Home (private);Residence;-1;-1;Clear;6;285138;4eba3331722edc0eaf1762bb
+126;40.7116349040813 -74.0102935014651;16/11/2012 16:45;1005;Friday;MTA - Church St & Barclay St (BM1/BM2/BM3/BM4);Bus Line;Travel & Transport;-1;-1;Clear;6;285481;4fed8e67e4b0005d40e0fed2
+126;40.9123450467868 -73.9027547836304;16/11/2012 21:04;1264;Friday;MTA MaBSTOA & Bee-Line Bus at Riverdale Ave & W. 263rd St: (Bx7, Bx10, BxM1, BxM2, BxM18 & BL 8);Bus Station;Travel & Transport;-1;-1;Clear;6;285722;4d872bb1353060fc2a2816e3
+126;40.7463791194241 -73.9818906784058;16/11/2012 22:05;1325;Friday;MTA Subway - 33rd St (6);Metro Station;Travel & Transport;-1;-1;Clear;6;285772;4b46b4c0f964a520252726e3
+126;40.6904333657826 -73.9852809906006;16/11/2012 23:02;1382;Friday;MTA Subway - Hoyt St (2/3);Metro Station;Travel & Transport;-1;-1;Clear;6;285815;4bae676cf964a520c6ad3be3
+126;40.7994853414517 -73.9683072897888;17/11/2012 00:58;58;Saturday;Yakitori Sun-Chan;Japanese Restaurant;Food;2;8.0;Clear;6;285896;4ae63b5bf964a520d7a521e3
+126;40.7946757855249 -73.9717626571655;17/11/2012 01:01;61;Saturday;MTA Subway - 96th St (1/2/3);Metro Station;Travel & Transport;-1;-1;Clear;6;285897;4b0e1598f964a520c85423e3
+126;40.8331652006224 -73.9418603427692;17/11/2012 02:35;155;Saturday;The Lair Of Modern Strange Cowboy;Home (private);Residence;-1;-1;Clear;6;285940;4eba3331722edc0eaf1762bb
+126;40.7571644769378 -73.9144165607695;17/11/2012 14:27;867;Saturday;MTA Subway - 46th St (M/R);Metro Station;Travel & Transport;-1;-1;Clear;6;286262;4bcb46dc0687ef3b895addcc
+126;40.7491426612534 -73.9378380775452;17/11/2012 17:20;1040;Saturday;MTA Subway - Queens Plaza (E/M/R);Metro Station;Travel & Transport;-1;-1;Clear;6;286435;4bebd433a9900f4799331840
+127;40.8340978041072 -73.9452672225881;19/11/2012 13:08;788;Monday;Galaxy Gourmet Deli;Deli / Bodega;Food;1;8.2;Clouds;6;287234;4fe9524ce4b0d971aa120f82
+127;40.5671960000000 -73.8825760000000;19/11/2012 19:35;1175;Monday;MTA Bus - Beach 169 St & Rockaway Point Bl (Q22/Q35);Bus Stop;Travel & Transport;-1;-1;Clouds;6;287467;4dc9ac5145dd3449a50fbac4
+127;40.6899127194574 -73.9815044403076;19/11/2012 23:01;1381;Monday;MTA Subway - DeKalb Ave (B/Q/R);Metro Station;Travel & Transport;-1;-1;Clouds;6;287603;4b50e721f964a520db3727e3
+127;40.7085883614824 -73.9910316467285;19/11/2012 23:24;1404;Monday;MTA Subway - Manhattan Bridge (B/D/N/Q);Train;Travel & Transport;-1;-1;Clouds;6;287614;4a737bf8f964a52091dc1fe3
+127;40.8331652006224 -73.9418603427692;20/11/2012 14:05;845;Tuesday;The Grinnell;Home (private);Residence;-1;-1;Clear;6;288060;4c524854384c76b00080f62a
+127;40.7085883614824 -73.9910316467285;20/11/2012 17:01;1021;Tuesday;MTA Subway - Manhattan Bridge (B/D/N/Q);Train;Travel & Transport;-1;-1;Clear;6;288164;4a737bf8f964a52091dc1fe3
+127;40.7590904609109 -73.8300561904907;20/11/2012 18:17;1097;Tuesday;MTA Bus Stop - Q25/Q34/Q65;Bus Station;Travel & Transport;-1;-1;Clear;6;288223;4c3b937fbe4620a1e6950c13
+127;40.7594786665511 -73.8300985117754;20/11/2012 21:23;1283;Tuesday;MTA Subway - Flushing/Main St (7);Metro Station;Travel & Transport;-1;-1;Clear;6;288399;4b575c8df964a520993328e3
+127;40.6899127194574 -73.9815044403076;20/11/2012 23:06;1386;Tuesday;MTA Subway - DeKalb Ave (B/Q/R);Metro Station;Travel & Transport;-1;-1;Clear;6;288450;4b50e721f964a520db3727e3
+127;40.8487589952160 -73.9382779598236;22/11/2012 00:40;40;Thursday;MTA New York City Bus - W. 178th Street & Ft. Washington Avenue (Bx3/Bx7/Bx11/Bx13/Bx35/Bx36/Bx36LTD/M4/M4LTD/M5/M5LTD/M98LTD/M100);Bus Stop;Travel & Transport;-1;7.4;Clear;6;289214;4daaaa627abaf9a10c17ca32
+127;40.8488458333230 -73.9384174346924;22/11/2012 00:48;48;Thursday;George Washington Bridge Bus Station;Bus Station;Travel & Transport;-1;5.6;Clear;6;289218;4af609c9f964a520770022e3
+127;40.8821407898918 -74.0422647901029;22/11/2012 01:15;75;Thursday;Hackensack Bus Terminal;Bus Station;Travel & Transport;-1;6.3;Clear;6;289227;4b9aac00f964a520abcb35e3
+127;40.9141779975907 -74.1776352146310;22/11/2012 01:58;118;Thursday;NJT Market St Garage;Building;Professional & Other Places;-1;-1;Clear;6;289251;4d549dc8b4deb1f71197fb79
+127;40.7572212983984 -73.9915466308594;22/11/2012 03:24;204;Thursday;Port Authority Bus Terminal;Bus Station;Travel & Transport;-1;5.5;Clear;6;289269;4840fe6bf964a52030501fe3
+127;40.7617816261867 -73.9850546682068;22/11/2012 03:51;231;Thursday;Natsumi;Sushi Restaurant;Food;3;7.9;Clear;6;289273;45fa3e3df964a52050441fe3
+127;40.8155406846180 -73.9584234721819;22/11/2012 03:51;231;Thursday;MTA Subway - 125th St (1);Metro Station;Travel & Transport;-1;-1;Clear;6;289274;4ae6258af964a52013a521e3
+127;40.8331652006224 -73.9418603427692;23/11/2012 18:34;1114;Friday;Broadway/Nightmare Drive;Home (private);Residence;-1;-1;Clear;6;290238;4ceb39824cdf8eecc44052d1
+127;40.8341815824087 -73.9451873302460;23/11/2012 22:13;1333;Friday;MTA MaBSTOA Bus - M4 / M5 / Bx6 at 157th Street / Broadway & Riverside Drive;Bus Station;Travel & Transport;-1;-1;Clouds;6;290369;4f21062d4fc6c2640987c5d1
+127;40.8346576535679 -73.9451868588011;24/11/2012 23:24;1404;Saturday;La Stella Cleaners;Laundry Service;Shop & Service;-1;-1;Clear;6;291051;4d2f50add9d8a1430f1902d8
+127;40.8331652006224 -73.9418603427692;25/11/2012 20:54;1254;Sunday;Broadway/Nightmare Drive;Home (private);Residence;-1;-1;Clouds;6;291598;4ceb39824cdf8eecc44052d1
+127;40.8341610206876 -73.9450376116797;25/11/2012 21:54;1314;Sunday;Twin Donut;Donut Shop;Food;1;-1;Clouds;6;291616;4b515378f964a520f94a27e3
+127;40.8331652006224 -73.9418603427692;25/11/2012 23:39;1419;Sunday;The Lair Of Modern Strange Cowboy;Home (private);Residence;-1;-1;Clouds;6;291651;4eba3331722edc0eaf1762bb
+128;40.6604738351670 -73.8302910891864;26/11/2012 17:22;1042;Monday;MTA Subway - Howard Beach/JFK Airport (A);Metro Station;Travel & Transport;-1;-1;Clear;6;292162;4a7ead5ef964a5200cf21fe3
+128;40.6086420833785 -73.8190376758575;26/11/2012 19:39;1179;Monday;MTA Bus - Q53;Beach;Outdoors & Recreation;-1;-1;Clear;6;292271;4e65a453091afcffda0a2424
+128;40.7340555764763 -73.8708472251892;26/11/2012 20:08;1208;Monday;Queens Center Mall;Shopping Mall;Shop & Service;-1;7.5;Clear;6;292291;4528a216f964a520173b1fe3
+128;40.7333724746837 -73.8711404741537;26/11/2012 20:10;1210;Monday;MTA Bus - Q11/Q21/Q29/Q52LTD/Q53LTD/Q59/Q60 - Queens Blvd & 59th Av;Bus Line;Travel & Transport;-1;-1;Clear;6;292295;4f47eadfe4b0291e47bdec13
+128;40.7631337910326 -73.8752118314646;26/11/2012 21:13;1273;Monday;MTABus Q19, Q49 (Astoria Blvd/94th St);Bus Station;Travel & Transport;-1;-1;Clear;6;292339;50529a3ce4b03ac261a34168
+128;40.7572212983984 -73.9915466308594;29/11/2012 02:17;137;Thursday;Port Authority Bus Terminal;Bus Station;Travel & Transport;-1;5.5;Clear;6;293479;4840fe6bf964a52030501fe3
+128;40.7564898726738 -73.9862680435181;29/11/2012 02:27;147;Thursday;Times Square;Plaza;Outdoors & Recreation;-1;9.0;Clear;6;293480;49b7ed6df964a52030531fe3
+128;40.8155406846180 -73.9584234721819;29/11/2012 02:51;171;Thursday;MTA Subway - 125th St (1);Metro Station;Travel & Transport;-1;-1;Clear;6;293488;4ae6258af964a52013a521e3
+128;40.8331652006224 -73.9418603427692;01/12/2012 14:39;879;Saturday;The Grinnell;Home (private);Residence;-1;-1;Clouds;6;294521;4c524854384c76b00080f62a
+128;40.8312828264783 -73.9413925020210;01/12/2012 15:54;954;Saturday;MTA Subway - 155th St (C);Metro Station;Travel & Transport;-1;-1;Clouds;6;294587;4b969536f964a52070d634e3
+128;40.6900872257332 -73.9817776229191;01/12/2012 17:35;1055;Saturday;NYCT Transit Survey Unit;Office;Professional & Other Places;-1;-1;Clouds;6;294662;4c7f04be7fd4ef3b108394a1
+128;40.8278390825735 -73.9257681369781;01/12/2012 18:47;1127;Saturday;MTA Bus - E 161 St & River Av (Bx6/Bx13);Bus Stop;Travel & Transport;-1;6.2;Clouds;6;294704;4e61358581301b932281b4a4
+128;40.8331652006224 -73.9418603427692;02/12/2012 00:11;11;Sunday;The Lair Of Modern Strange Cowboy;Home (private);Residence;-1;-1;Clouds;6;294926;4eba3331722edc0eaf1762bb
+128;40.7085883614824 -73.9910316467285;02/12/2012 12:31;751;Sunday;MTA Subway - Manhattan Bridge (B/D/N/Q);Train;Travel & Transport;-1;-1;Fog;6;295195;4a737bf8f964a52091dc1fe3
+128;40.6914746462291 -73.9873838424683;02/12/2012 13:58;838;Sunday;MTA Subway - Jay St/MetroTech (A/C/F/R);Metro Station;Travel & Transport;-1;-1;Fog;6;295265;4b3a1855f964a520026125e3
+128;40.7306323510853 -73.9996371281808;02/12/2012 14:50;890;Sunday;NYU Law | Vanderbilt Hall;Law School;College & University;-1;-1;Fog;6;295295;4a3bdd50f964a520d7a01fe3
+128;40.8002312249141 -73.8288116455078;02/12/2012 20:10;1210;Sunday;Bronx-Whitestone Bridge;Bridge;Outdoors & Recreation;-1;-1;Clouds;6;295512;4b390cf4f964a5201c5525e3
+128;40.8604664913413 -73.9255428314209;02/12/2012 21:19;1279;Sunday;MTA Subway - Dyckman St (1);Metro Station;Travel & Transport;-1;-1;Clouds;6;295549;4ae10ae7f964a520ce8421e3
+129;40.8213441496323 -73.9540386199951;03/12/2012 12:15;735;Monday;MTA Subway - 137th St/City College (1);Metro Station;Travel & Transport;-1;-1;Fog;6;295898;4b2c7911f964a52044c724e3
+129;40.6900872257332 -73.9817776229191;03/12/2012 13:02;782;Monday;NYCT Transit Survey Unit;Office;Professional & Other Places;-1;-1;Clear;6;295933;4c7f04be7fd4ef3b108394a1
+129;40.6897825572405 -73.9810752868652;03/12/2012 14:28;868;Monday;Five Guys;Burger Joint;Food;1;-1;Clear;6;295990;4eeb9b1b93ad2cbd83b62657
+129;40.6889893757358 -73.9812992513180;03/12/2012 16:33;993;Monday;MTA Bus - Fulton Mall & Flatbush Av Ext (B25/B26/B38/B38LTD/B52);Bus Stop;Travel & Transport;-1;5.8;Clear;6;296052;4d9abfe39298b1f78f104838
+129;40.6621697108633 -73.8648409015367;03/12/2012 17:57;1077;Monday;MTA Regional Bus Depot - Spring Creek;Bus Station;Travel & Transport;-1;-1;Clear;6;296100;4dd2d58481dcfc9dcdc2163f
+129;40.6963140173316 -73.9906616720344;04/12/2012 21:46;1306;Tuesday;Cadman Plaza West;Plaza;Outdoors & Recreation;-1;7.0;Clear;6;297072;4d6836169968236ac0e66da9
+129;40.6887540940881 -73.9806412614152;04/12/2012 22:23;1343;Tuesday;McDonald's;Fast Food Restaurant;Food;1;4.9;Clear;6;297093;4e7fe4729adf2271f9ace3ab
+129;40.7085883614824 -73.9910316467285;05/12/2012 16:55;1015;Wednesday;MTA Subway - Manhattan Bridge (B/D/N/Q);Train;Travel & Transport;-1;-1;Clouds;6;297584;4a737bf8f964a52091dc1fe3
+129;40.7710592625284 -73.9176545604588;05/12/2012 17:40;1060;Wednesday;MTA M60, Q19 (Astoria Blvd/31st St);Bus Station;Travel & Transport;-1;5.7;Clouds;6;297611;4f91ec61e4b0e03b66c4ca6b
+129;40.7660790376824 -73.8835287094116;05/12/2012 18:40;1120;Wednesday;MTA Bus Operations Depot - LaGuardia;Bus Station;Travel & Transport;-1;-1;Clouds;6;297669;4dd408046365c27b0dbf4239
+129;40.8032918643619 -73.9328276594543;05/12/2012 21:04;1264;Wednesday;MTA Regional Bus Depot - 126th Street;Bus Station;Travel & Transport;-1;-1;Clear;6;297817;4da27b21b521224b03dc0aee
+129;40.6904333657826 -73.9852809906006;05/12/2012 22:59;1379;Wednesday;MTA Subway - Hoyt St (2/3);Metro Station;Travel & Transport;-1;-1;Clear;6;297909;4bae676cf964a520c6ad3be3
+129;40.6900872257332 -73.9817776229191;06/12/2012 16:07;967;Thursday;NYCT Transit Survey Unit;Office;Professional & Other Places;-1;-1;Clear;6;298457;4c7f04be7fd4ef3b108394a1
+129;40.6899127194574 -73.9815044403076;06/12/2012 19:35;1175;Thursday;MTA Subway - DeKalb Ave (B/Q/R);Metro Station;Travel & Transport;-1;-1;Clear;6;298618;4b50e721f964a520db3727e3
+129;40.6963140173316 -73.9906616720344;06/12/2012 21:47;1307;Thursday;Cadman Plaza West;Plaza;Outdoors & Recreation;-1;7.0;Clear;6;298742;4d6836169968236ac0e66da9
+129;40.6887540940881 -73.9806412614152;06/12/2012 22:08;1328;Thursday;McDonald's;Fast Food Restaurant;Food;1;4.9;Unknown;6;298752;4e7fe4729adf2271f9ace3ab
+129;40.7661619622658 -73.9775764953862;06/12/2012 23:42;1422;Thursday;MTA Bus Stop M5 M7 X1 X7 X9 BxM2;Bus Line;Travel & Transport;-1;-1;Clear;6;298811;4d9a0749b188721e0fc54b37
+129;40.8331652006224 -73.9418603427692;09/12/2012 00:04;4;Sunday;The Lair Of Modern Strange Cowboy;Home (private);Residence;-1;-1;Rain;6;300655;4eba3331722edc0eaf1762bb
+129;40.6900872257332 -73.9817776229191;09/12/2012 09:42;582;Sunday;NYCT Transit Survey Unit;Office;Professional & Other Places;-1;-1;Clouds;6;300836;4c7f04be7fd4ef3b108394a1
+129;40.7136501283367 -73.8302671865530;09/12/2012 13:01;781;Sunday;MTA Bus Stop - Q10/Q37/Q60;Bus Station;Travel & Transport;-1;-1;Unknown;6;300955;4d4ac71c5129a35dab4047ac
+129;40.6901232953871 -73.9840790213382;09/12/2012 16:39;999;Sunday;Fulton Hot Dog King;Hot Dog Joint;Food;1;7.1;Clouds;6;301098;4bc73d820050b713a144b83b
+129;40.8079950658704 -73.9638555049896;09/12/2012 17:38;1058;Sunday;MTA Bus Stop - 116th & Broadway (M4/M60/M104);Bus Station;Travel & Transport;-1;-1;Rain;6;301128;4eb8e0c8e5e874370577ab72
+130;40.8331652006224 -73.9418603427692;11/12/2012 00:00;0;Tuesday;The Lair Of Modern Strange Cowboy;Home (private);Residence;-1;-1;Clouds;6;301988;4eba3331722edc0eaf1762bb
+130;40.6755365089077 -73.8717549157205;11/12/2012 17:15;1035;Tuesday;Q7, Q8;Bus Line;Travel & Transport;-1;-1;Clouds;6;302428;4d7b9fe7645ea35da29e35f8
+130;40.6990888502098 -73.8067627956945;11/12/2012 18:18;1098;Tuesday;MTA Bus - Archer Avenue & Sutphin Blvd (Q6/Q6LTD/Q20A/Q20B/Q24/Q30/Q31/Q43/Q43);Bus Stop;Travel & Transport;-1;-1;Clouds;6;302464;4d9f77f4fc4f721eeafb9f5f
+130;40.7519046092262 -73.9866960394024;11/12/2012 22:14;1334;Tuesday;MTA College Point Depot Express Routes QM1 QM2 QM3 QM4 QM5 QM6 QM20;Bus Line;Travel & Transport;-1;-1;Clouds;6;302665;4e5d8d80483b1858597630f1
+130;40.7014573241921 -74.0132142884719;12/12/2012 19:20;1160;Wednesday;Staten Island Ferry - Whitehall Terminal;Pier;Travel & Transport;-1;-1;Clear;6;303104;4165d880f964a5207e1d1fe3
+130;40.8332608333333 -73.9458155500000;13/12/2012 04:20;260;Thursday;Boricua College;General College & University;College & University;-1;-1;Clear;6;303401;4c2e6918ed37a593e68b6503
+130;40.8173027038574 -73.9585418701172;14/12/2012 17:03;1023;Friday;135 St Broadway Hamilton Heights;Bus Line;Travel & Transport;-1;-1;Clear;6;304190;50cba206e4b06fef1ba51324
+130;40.7738390000000 -73.8712200000000;14/12/2012 20:02;1202;Friday;LaGuardia Airport (LGA) (LaGuardia Airport);Airport;Travel & Transport;-1;5.3;Clear;6;304348;4ace6c89f964a52078d020e3
+130;40.7631337910326 -73.8752118314646;14/12/2012 21:12;1272;Friday;MTABus Q19, Q49 (Astoria Blvd/94th St);Bus Station;Travel & Transport;-1;-1;Clear;6;304397;50529a3ce4b03ac261a34168
+130;40.7592855009274 -73.8307857513428;16/12/2012 11:32;692;Sunday;MTA Bus - Q19/Q48/Q50/Q66 (Roosevelt Avenue/Main Street);Bus Station;Travel & Transport;-1;5.0;Clouds;6;305591;4d59b6711d4a8cfa0a9e8fed
+130;40.7590904609109 -73.8300561904907;16/12/2012 13:57;837;Sunday;MTA Bus Stop - Q25/Q34/Q65;Bus Station;Travel & Transport;-1;-1;Clouds;6;305684;4c3b937fbe4620a1e6950c13
+130;40.8342987750883 -74.0979492166034;16/12/2012 19:38;1178;Sunday;NJT - 163/164 Bus Stop;Bus Stop;Travel & Transport;-1;-1;Rain;6;305868;4df38371aeb7170aa2f12e06
+130;40.9141779975907 -74.1776352146310;16/12/2012 20:40;1240;Sunday;NJT Market St Garage;Building;Professional & Other Places;-1;-1;Clouds;6;305898;4d549dc8b4deb1f71197fb79
+131;40.6880585097395 -73.9804905425158;17/12/2012 16:26;986;Monday;MTA Subway - Nevins St (2/3/4/5);Metro Station;Travel & Transport;-1;-1;Clouds;6;306386;4ad8fa6ef964a520ac1621e3
+131;40.7463791194241 -73.9818906784058;17/12/2012 17:03;1023;Monday;MTA Subway - 33rd St (6);Metro Station;Travel & Transport;-1;-1;Clouds;6;306408;4b46b4c0f964a520252726e3
+131;40.7567336821428 -73.9544570446014;17/12/2012 17:34;1054;Monday;Ed Koch Queensboro Bridge;Bridge;Outdoors & Recreation;-1;-1;Clouds;6;306430;4a43bd40f964a520bfa61fe3
+131;40.6990888502098 -73.8067627956945;17/12/2012 18:40;1120;Monday;MTA Bus - Archer Avenue & Sutphin Blvd (Q6/Q6LTD/Q20A/Q20B/Q24/Q30/Q31/Q43/Q43);Bus Stop;Travel & Transport;-1;-1;Clouds;6;306489;4d9f77f4fc4f721eeafb9f5f
+131;40.7415372238442 -73.9880619250153;18/12/2012 05:00;300;Tuesday;MTA Eastchester Depot Bus Routes BXM6 BXM7 BXM8 BXM9 BXM10;Bus Line;Travel & Transport;-1;-1;Rain;6;306704;4e0f4ac414956c628502c637
+131;40.7650064201482 -73.8872623443604;18/12/2012 17:52;1072;Tuesday;MTA Bus - M60, Q19, Q33, Q47, Q69;Bus Station;Travel & Transport;-1;-1;Clouds;6;307111;4cc184d3f82ebfb75c417091
+131;40.7493437370736 -73.9393661357916;18/12/2012 19:11;1151;Tuesday;MTA Q66, Q69 (28th Street/Queens Plaza South);Bus Station;Travel & Transport;-1;-1;Clouds;6;307197;4e6c509f483b1f5ebe081819
+131;40.6316674042600 -73.9470294772386;18/12/2012 20:31;1231;Tuesday;MTA Bus - Q35 @ Avenue H & Nostrand Avenue;Bus Line;Travel & Transport;-1;-1;Clouds;6;307297;4d85caba5091370410239e5b
+131;40.6315437417551 -73.9468740877078;18/12/2012 21:34;1294;Tuesday;Target;Big Box Store;Shop & Service;-1;7.0;Clouds;6;307336;4b4cd551f964a520c8c026e3
+131;40.8340978041072 -73.9452672225881;18/12/2012 23:53;1433;Tuesday;Galaxy Gourmet Deli;Deli / Bodega;Food;1;8.2;Clouds;6;307406;4fe9524ce4b0d971aa120f82
+131;40.8331652006224 -73.9418603427692;19/12/2012 02:07;127;Wednesday;The Grinnell;Home (private);Residence;-1;-1;Clear;6;307436;4c524854384c76b00080f62a
+131;40.8213441496323 -73.9540386199951;19/12/2012 15:08;908;Wednesday;MTA Subway - 137th St/City College (1);Metro Station;Travel & Transport;-1;-1;Clear;6;307814;4b2c7911f964a52044c724e3
+131;40.6930853448663 -73.9284825325012;19/12/2012 17:06;1026;Wednesday;MTA Subway - Kosciuszko St (J);Metro Station;Travel & Transport;-1;-1;Clear;6;307887;4b5d9f0df964a520d06329e3
+131;40.7000976385889 -73.7640893686040;19/12/2012 20:32;1232;Wednesday;Q3 Bus Stop;Bus Line;Travel & Transport;-1;-1;Clear;6;308065;4ee53f258b81bab2843b035b
+131;40.6755365089077 -73.8717549157205;19/12/2012 21:41;1301;Wednesday;Q7, Q8;Bus Line;Travel & Transport;-1;-1;Clear;6;308119;4d7b9fe7645ea35da29e35f8
+131;40.8192174354861 -73.9571721746063;19/12/2012 23:35;1415;Wednesday;MTA Regional Bus Operations - Manhattanville Depot;Bus Station;Travel & Transport;-1;-1;Clear;6;308187;4cf5538b8333224bb7911f8e
+131;40.8331899687798 -73.8615044006510;20/12/2012 17:37;1057;Thursday;MTA Subway - Parkchester (6);Metro Station;Travel & Transport;-1;-1;Clouds;6;308295;4f4e6c00e4b088c4af65d7b8
+131;40.6900872257332 -73.9817776229191;21/12/2012 16:19;979;Friday;NYCT Transit Survey Unit;Office;Professional & Other Places;-1;-1;Clouds;6;308846;4c7f04be7fd4ef3b108394a1
+131;40.7468342989195 -73.8915538787842;21/12/2012 17:35;1055;Friday;MTA Subway - 74th St/Roosevelt Ave/Jackson Hts (E/F/M/R/7);Metro Station;Travel & Transport;-1;-1;Clouds;6;308900;4b283971f964a520289124e3
+131;40.7738390000000 -73.8712200000000;21/12/2012 20:19;1219;Friday;LaGuardia Airport (LGA) (LaGuardia Airport);Airport;Travel & Transport;-1;5.3;Clouds;6;309049;4ace6c89f964a52078d020e3
+131;40.8077676859500 -73.9455413818359;21/12/2012 21:08;1268;Friday;MTA Bus - W 125 St & Malcolm X Bl (Bx15/M7/M60-SBS/M100/M101/M102);Bus Stop;Travel & Transport;-1;-1;Clouds;6;309087;4d9834e3b7bf2c0f4cd1ea2d
+131;40.8080704035114 -73.9457264435875;21/12/2012 21:09;1269;Friday;Marshalls;Department Store;Shop & Service;-1;5.4;Clouds;6;309089;4ad7e8b9f964a520fc0f21e3
+131;40.6899127194574 -73.9815044403076;21/12/2012 22:21;1341;Friday;MTA Subway - DeKalb Ave (B/Q/R);Metro Station;Travel & Transport;-1;-1;Clouds;6;309135;4b50e721f964a520db3727e3
+132;40.8331652006224 -73.9418603427692;27/12/2012 03:44;224;Thursday;The Lair Of Modern Strange Cowboy;Home (private);Residence;-1;-1;Rain;6;310135;4eba3331722edc0eaf1762bb
+132;40.6900872257332 -73.9817776229191;27/12/2012 16:00;960;Thursday;NYCT Transit Survey Unit;Office;Professional & Other Places;-1;-1;Clouds;6;310410;4c7f04be7fd4ef3b108394a1
+132;40.7700768232489 -73.9179897308350;27/12/2012 17:41;1061;Thursday;MTA Subway - Astoria Blvd/Hoyt Ave (N/W);Metro Station;Travel & Transport;-1;-1;Clouds;6;310463;4a61542bf964a5204ec21fe3
+132;40.7738390000000 -73.8712200000000;27/12/2012 19:22;1162;Thursday;LaGuardia Airport (LGA) (LaGuardia Airport);Airport;Travel & Transport;-1;5.3;Clouds;6;310528;4ace6c89f964a52078d020e3
+132;40.8331652006224 -73.9418603427692;28/12/2012 00:26;26;Friday;The Grinnell;Home (private);Residence;-1;-1;Clouds;6;310648;4c524854384c76b00080f62a
+132;40.6996886534352 -73.8078312375281;28/12/2012 19:28;1168;Friday;LIRR - Jamaica Station - Track 7;Platform;Travel & Transport;-1;-1;Clear;6;311101;4c3cfebb980320a1107a8be4
+132;40.6900872257332 -73.9817776229191;28/12/2012 22:34;1354;Friday;NYCT Transit Survey Unit;Office;Professional & Other Places;-1;-1;Clear;6;311200;4c7f04be7fd4ef3b108394a1
+132;40.6904333657826 -73.9852809906006;28/12/2012 22:54;1374;Friday;MTA Subway - Hoyt St (2/3);Metro Station;Travel & Transport;-1;-1;Clear;6;311211;4bae676cf964a520c6ad3be3
+132;40.8331652006224 -73.9418603427692;29/12/2012 17:55;1075;Saturday;The Lair Of Modern Strange Cowboy;Home (private);Residence;-1;-1;Clouds;6;311559;4eba3331722edc0eaf1762bb
+132;40.7085883614824 -73.9910316467285;30/12/2012 18:46;1126;Sunday;MTA Subway - Manhattan Bridge (B/D/N/Q);Train;Travel & Transport;-1;-1;Clear;6;312096;4a737bf8f964a52091dc1fe3
+132;40.8331652006224 -73.9418603427692;30/12/2012 23:10;1390;Sunday;The Lair Of Modern Strange Cowboy;Home (private);Residence;-1;-1;Clear;6;312215;4eba3331722edc0eaf1762bb
+133;40.8331652006224 -73.9418603427692;31/12/2012 13:38;818;Monday;The Grinnell;Home (private);Residence;-1;-1;Clear;6;312425;4c524854384c76b00080f62a
+133;40.8213441496323 -73.9540386199951;31/12/2012 15:09;909;Monday;MTA Subway - 137th St/City College (1);Metro Station;Travel & Transport;-1;-1;Clear;6;312479;4b2c7911f964a52044c724e3
+133;40.7124594856564 -73.7844586372375;31/12/2012 20:59;1259;Monday;ttmg Fan Spot - Hillside Av & 179th St (Jamaica);Metro Station;Travel & Transport;-1;-1;Clouds;6;312673;4dcd69d722718eed7a1de35a
+133;40.7439786438383 -73.9273165687694;04/01/2013 16:57;1017;Friday;La Quinta Inn Queens (New York City);Hotel;Travel & Transport;-1;5.1;Clear;6;314729;4bc395cddce4eee1c6aa719d
+133;40.7594786665511 -73.8300985117754;04/01/2013 17:25;1045;Friday;MTA Subway - Flushing/Main St (7);Metro Station;Travel & Transport;-1;-1;Clear;6;314750;4b575c8df964a520993328e3
+133;40.7735868756884 -73.8415145874023;04/01/2013 17:59;1079;Friday;MTA Regional Bus Depot - College Point;Bus Station;Travel & Transport;-1;-1;Clear;6;314767;4dd3fba26365c27b0dbef502
+133;40.7592855009274 -73.8307857513428;04/01/2013 19:55;1195;Friday;MTA Bus - Q19/Q48/Q50/Q66 (Roosevelt Avenue/Main Street);Bus Station;Travel & Transport;-1;5.0;Clear;6;314847;4d59b6711d4a8cfa0a9e8fed
+133;40.8341385597857 -73.9455842971802;05/01/2013 03:39;219;Saturday;Riverside Deli;Deli / Bodega;Food;1;-1;Clear;6;314993;4cb8bd66a33bb1f7458683fd
+133;40.8331652006224 -73.9418603427692;05/01/2013 04:17;257;Saturday;The Grinnell;Home (private);Residence;-1;-1;Clear;6;314994;4c524854384c76b00080f62a
+133;40.8331652006224 -73.9418603427692;06/01/2013 08:14;494;Sunday;Broadway/Nightmare Drive;Home (private);Residence;-1;-1;Clouds;6;315632;4ceb39824cdf8eecc44052d1
+134;40.5769992443877 -73.9815258979797;07/01/2013 01:10;70;Monday;Dirtbag Central;Coworking Space;Professional & Other Places;-1;-1;Clouds;6;316031;4fddb7fce4b05233742c8990
+134;40.6526759641946 -74.0021467208862;07/01/2013 05:24;324;Monday;MTA Regional Bus Depot - Jackie Gleason;Bus Station;Travel & Transport;-1;-1;Clouds;6;316089;4dd2d4bc81dcfc9dcdc2124f
+134;40.6557390232741 -73.9072169854714;07/01/2013 07:21;441;Monday;MTA Bus - (B8 Bay Ridge-Bound)/B60 - Rockaway Av & Hegeman Av;Bus Line;Travel & Transport;-1;-1;Clear;6;316135;4d782852c1d56ea83769cc2b
+134;40.6194741140845 -73.9899587631226;07/01/2013 08:20;500;Monday;MTA B8 64th Street & 18th Ave;Bus Line;Travel & Transport;-1;-1;Clear;6;3,16E+05;4e5563c8315131ee7a9352c7
+134;40.7085883614824 -73.9910316467285;07/01/2013 20:26;1226;Monday;MTA Subway - Manhattan Bridge (B/D/N/Q);Train;Travel & Transport;-1;-1;Clear;6;316565;4a737bf8f964a52091dc1fe3
+134;40.6880585097395 -73.9804905425158;08/01/2013 03:15;195;Tuesday;MTA Subway - Nevins St (2/3/4/5);Metro Station;Travel & Transport;-1;-1;Clear;6;316673;4ad8fa6ef964a520ac1621e3
+134;40.7085883614824 -73.9910316467285;08/01/2013 20:28;1228;Tuesday;MTA Subway - Manhattan Bridge (B/D/N/Q);Train;Travel & Transport;-1;-1;Clear;6;317184;4a737bf8f964a52091dc1fe3
+134;40.6914746462291 -73.9873838424683;09/01/2013 03:32;212;Wednesday;MTA Subway - Jay St/MetroTech (A/C/F/R);Metro Station;Travel & Transport;-1;-1;Clouds;6;317303;4b3a1855f964a520026125e3
+134;40.8312828264783 -73.9413925020210;09/01/2013 04:29;269;Wednesday;MTA Subway - 155th St (C);Metro Station;Travel & Transport;-1;-1;Clouds;6;317313;4b969536f964a52070d634e3
+134;40.8331652006224 -73.9418603427692;09/01/2013 04:43;283;Wednesday;The Lair Of Modern Strange Cowboy;Home (private);Residence;-1;-1;Clouds;6;317314;4eba3331722edc0eaf1762bb
+134;40.8341815824087 -73.9451873302460;09/01/2013 18:25;1105;Wednesday;MTA MaBSTOA Bus - M4 / M5 / Bx6 at 157th Street / Broadway & Riverside Drive;Bus Station;Travel & Transport;-1;-1;Clouds;6;317710;4f21062d4fc6c2640987c5d1
+134;40.6053194625755 -73.9804116926189;09/01/2013 22:54;1374;Wednesday;MTA Bus - Kings Hy & W 7 St (B82);Bus Stop;Travel & Transport;-1;-1;Clear;6;317844;4de5334bd4c0704405ad6529
+134;40.5774555812085 -73.9812469482422;10/01/2013 01:06;66;Thursday;MTA Subway - Coney Island/Stillwell Ave (D/F/N/Q);Metro Station;Travel & Transport;-1;-1;Clear;6;317873;4bd1b96a77b29c7439118d82
+134;40.7564898726738 -73.9862680435181;10/01/2013 03:43;223;Thursday;Times Square;Plaza;Outdoors & Recreation;-1;9.0;Clear;6;317893;49b7ed6df964a52030531fe3
+134;40.8341610206876 -73.9450376116797;10/01/2013 04:37;277;Thursday;Twin Donut;Donut Shop;Food;1;-1;Clear;6;317911;4b515378f964a520f94a27e3
+134;40.5774555812085 -73.9812469482422;10/01/2013 22:58;1378;Thursday;MTA Subway - Coney Island/Stillwell Ave (D/F/N/Q);Metro Station;Travel & Transport;-1;-1;Clear;6;318385;4bd1b96a77b29c7439118d82
+134;40.6900872257332 -73.9817776229191;11/01/2013 02:54;174;Friday;NYCT Transit Survey Unit;Office;Professional & Other Places;-1;-1;Clear;6;318427;4c7f04be7fd4ef3b108394a1
+134;40.8155406846180 -73.9584234721819;11/01/2013 04:28;268;Friday;MTA Subway - 125th St (1);Metro Station;Travel & Transport;-1;-1;Clear;6;318449;4ae6258af964a52013a521e3
+134;40.8192174354861 -73.9571721746063;12/01/2013 08:43;523;Saturday;MTA Regional Bus Operations - Manhattanville Depot;Bus Station;Travel & Transport;-1;-1;Clouds;6;319167;4cf5538b8333224bb7911f8e
+134;40.7564898726738 -73.9862680435181;13/01/2013 01:28;88;Sunday;Times Square;Plaza;Outdoors & Recreation;-1;9.0;Clouds;6;319774;49b7ed6df964a52030531fe3
+134;40.8559470201852 -73.9008381921455;13/01/2013 22:07;1327;Sunday;Popeye's;Fried Chicken Joint;Food;1;5.4;Clouds;6;320245;4d72bb765f0037042585e5a0
+134;40.8660975573721 -73.8943862915039;13/01/2013 23:24;1404;Sunday;MTA MaBSTOA Bus at Kingsbridge Rd. & The Grand Concourse: (Bx1, Bx2, Bx9, Bx22, Bx28, BxM4);Bus Station;Travel & Transport;-1;-1;Clouds;6;320263;4fc1d832bb3dbdc35673fd46
+135;40.6900872257332 -73.9817776229191;14/01/2013 02:25;145;Monday;NYCT Transit Survey Unit;Office;Professional & Other Places;-1;-1;Clouds;6;320298;4c7f04be7fd4ef3b108394a1
+135;40.7085883614824 -73.9910316467285;14/01/2013 03:21;201;Monday;MTA Subway - Manhattan Bridge (B/D/N/Q);Train;Travel & Transport;-1;-1;Clouds;6;320310;4a737bf8f964a52091dc1fe3
+135;40.8278609004168 -73.9256514608860;14/01/2013 23:02;1382;Monday;MTA Subway - 161st St/Yankee Stadium (4/B/D);Metro Station;Travel & Transport;-1;-1;Clouds;6;320822;4b5b08c9f964a520f9df28e3
+135;40.7085883614824 -73.9910316467285;15/01/2013 01:40;100;Tuesday;MTA Subway - Manhattan Bridge (B/D/N/Q);Train;Travel & Transport;-1;-1;Clouds;6;320846;4a737bf8f964a52091dc1fe3
+135;40.6900872257332 -73.9817776229191;15/01/2013 02:25;145;Tuesday;NYCT Transit Survey Unit;Office;Professional & Other Places;-1;-1;Rain;6;320850;4c7f04be7fd4ef3b108394a1
+135;40.7593830207211 -73.9879631996155;15/01/2013 04:07;247;Tuesday;MTA Bus - 8 Av & W 46 St (M20/M104);Bus Stop;Travel & Transport;-1;-1;Rain;6;320867;50e8ed15e4b07ff4593e1bf4
+135;40.6526759641946 -74.0021467208862;16/01/2013 05:07;307;Wednesday;MTA Regional Bus Depot - Jackie Gleason;Bus Station;Travel & Transport;-1;-1;Clouds;6;321163;4dd2d4bc81dcfc9dcdc2124f
+135;40.6380241987027 -73.9787645284651;16/01/2013 05:53;353;Wednesday;MTA B67, B69 (McDonald Ave/Cortelyou Road);Bus Station;Travel & Transport;-1;-1;Clouds;6;321170;4df8089a1f6e448ec28e6fe0
+135;40.6876999271919 -73.9811611175537;16/01/2013 07:05;425;Wednesday;MTA Bus - Livingston St & Nevins St (B41/B41LTD/B45/B67/B103LTD);Bus Station;Travel & Transport;-1;-1;Clouds;6;321192;4d22782eb69c6dcbf7be8295
+135;40.6471648618247 -73.9803485611518;16/01/2013 07:55;475;Wednesday;MTA B67, B69, B103 (McDonald Ave/Caton Ave);Bus Station;Travel & Transport;-1;-1;Rain;6;321203;4da61b1ea86ecc5168c8828c
+135;40.6539468123820 -74.0045378711284;16/01/2013 09:19;559;Wednesday;MTA Subway - 36th St (D/N/R);Metro Station;Travel & Transport;-1;-1;Rain;6;321262;4bf804ee8d30d13a1feaff17
+135;40.6904333657826 -73.9852809906006;17/01/2013 03:14;194;Thursday;MTA Subway - Hoyt St (2/3);Metro Station;Travel & Transport;-1;-1;Clear;6;321684;4bae676cf964a520c6ad3be3
+135;40.8331652006224 -73.9418603427692;17/01/2013 04:48;288;Thursday;The Lair Of Modern Strange Cowboy;Home (private);Residence;-1;-1;Clouds;6;321689;4eba3331722edc0eaf1762bb
+135;40.6507839864150 -73.9495895970824;18/01/2013 00:44;44;Friday;MTA Subway - Church Ave (2/5);Metro Station;Travel & Transport;-1;-1;Clouds;6;322426;4b5d272ef964a520c15429e3
+137;40.8331652006224 -73.9418603427692;29/01/2013 18:36;1116;Tuesday;The Lair Of Modern Strange Cowboy;Home (private);Residence;-1;-1;Fog;6;326665;4eba3331722edc0eaf1762bb
+137;40.6880585097395 -73.9804905425158;29/01/2013 20:32;1232;Tuesday;MTA Subway - Nevins St (2/3/4/5);Metro Station;Travel & Transport;-1;-1;Clouds;6;326732;4ad8fa6ef964a520ac1621e3
+137;40.7679967046751 -73.9818906784058;31/01/2013 04:12;252;Thursday;MTA Subway - 59th St/Columbus Circle (A/B/C/D/1);Metro Station;Travel & Transport;-1;-1;Rain;6;327522;4b1e78c2f964a520461a24e3
+137;40.8331652006224 -73.9418603427692;31/01/2013 06:14;374;Thursday;The Grinnell;Home (private);Residence;-1;-1;Rain;6;327542;4c524854384c76b00080f62a
+137;40.6900872257332 -73.9817776229191;01/02/2013 02:35;155;Friday;NYCT Transit Survey Unit;Office;Professional & Other Places;-1;-1;Clear;6;328188;4c7f04be7fd4ef3b108394a1
+137;40.6901405027252 -73.9819765090942;01/02/2013 03:45;225;Friday;Junior's Restaurant;Dessert Shop;Food;2;8.6;Clouds;6;328195;3fd66200f964a5207cf11ee3
+137;40.7507240000000 -73.9871280000000;01/02/2013 04:57;297;Friday;McDonald's;Fast Food Restaurant;Food;1;5.3;Clear;6;328203;4ae3d4cef964a5203b9921e3
+137;40.7497034836652 -73.9878129959106;01/02/2013 05:23;323;Friday;MTA Subway - 34th St/Herald Sq (B/D/F/M/N/Q/R/W);Metro Station;Travel & Transport;-1;-1;Clear;6;328210;4ad7a8d9f964a520640d21e3
+137;40.7519046092262 -73.9866960394024;01/02/2013 05:36;336;Friday;MTA College Point Depot Express Routes QM1 QM2 QM3 QM4 QM5 QM6 QM20;Bus Line;Travel & Transport;-1;-1;Clear;6;328216;4e5d8d80483b1858597630f1
+137;40.6899127194574 -73.9815044403076;01/02/2013 07:25;445;Friday;MTA Subway - DeKalb Ave (B/Q/R);Metro Station;Travel & Transport;-1;-1;Clouds;6;328259;4b50e721f964a520db3727e3
+137;40.8331652006224 -73.9418603427692;01/02/2013 09:09;549;Friday;The Grinnell;Home (private);Residence;-1;-1;Clouds;6;328341;4c524854384c76b00080f62a
+137;40.8331652006224 -73.9418603427692;01/02/2013 18:10;1090;Friday;The Lair Of Modern Strange Cowboy;Home (private);Residence;-1;-1;Clear;6;328650;4eba3331722edc0eaf1762bb
+137;40.5937675777609 -74.1353130340576;02/02/2013 15:37;937;Saturday;Sea View Hospital Rehabilitation Center & Home;Medical Center;Professional & Other Places;-1;-1;Clouds;6;329301;4be9e20e6295c9b61acb8508
+137;40.6336490127072 -74.1299458294018;02/02/2013 16:41;1001;Saturday;MTA Bus - Castleton Av & Jewett Av (S46/S53/S66/S96/X10/X10B/X14);Bus Stop;Travel & Transport;-1;-1;Clouds;6;329351;4d1fdddf5c4ca1cdb4a49c3d
+137;40.7449827019294 -73.9040993834799;02/02/2013 19:24;1164;Saturday;MTA Q18 Bus;Bus Line;Travel & Transport;-1;-1;Clouds;6;329465;4cc744c0a32bb1f75758a7a8
+137;40.7669064372843 -73.9213804898498;02/02/2013 19:54;1194;Saturday;MTA - 30th Avenue Bus Stop;Bus Station;Travel & Transport;-1;5.1;Clouds;6;329493;4abd30e1f964a520ed8820e3
+137;40.7261025671137 -73.8951482014169;02/02/2013 21:36;1296;Saturday;Joey's Pizzeria;Pizza Place;Food;1;7.9;Fog;6;329570;4b60b7e5f964a520b7f529e3
+137;40.7752350000000 -73.9348447322845;02/02/2013 23:46;1426;Saturday;Q18-Q102 MTA Bus Stop 27th Ave & 2nd Street;Bus Line;Travel & Transport;-1;-1;Snow;6;329642;4bea19226295c9b6b61e8608
+137;40.7650064201482 -73.8872623443604;03/02/2013 00:49;49;Sunday;MTA Bus - M60, Q19, Q33, Q47, Q69;Bus Station;Travel & Transport;-1;-1;Fog;6;329671;4cc184d3f82ebfb75c417091
+138;40.8331652006224 -73.9418603427692;04/02/2013 13:43;823;Monday;The Lair Of Modern Strange Cowboy;Home (private);Residence;-1;-1;Clouds;6;330308;4eba3331722edc0eaf1762bb
+138;40.6307277922840 -73.9771270751953;04/02/2013 21:21;1281;Monday;MTA Bus - B8 - 18th Ave & McDonald Ave;Bus Stop;Travel & Transport;-1;-1;Clouds;6;330563;4c65b90018b676b084a0ad0e
+138;40.6347866881065 -74.0235198912341;05/02/2013 01:18;78;Tuesday;MTA Bus - 4 Av & Bay Ridge Av (B9/B64/B70);Bus Stop;Travel & Transport;-1;-1;Clouds;6;330628;4cfeed7c202e224bc2a7ab2a
+138;40.6900872257332 -73.9817776229191;05/02/2013 03:38;218;Tuesday;NYCT Transit Survey Unit;Office;Professional & Other Places;-1;-1;Fog;6;330650;4c7f04be7fd4ef3b108394a1
+138;40.7565061266663 -73.9880275726318;05/02/2013 04:33;273;Tuesday;MTA Subway - 42nd St/Times Square/Port Authority Bus Terminal (A/C/E/N/Q/R/S/W/1/2/3/7);Metro Station;Travel & Transport;-1;-1;Snow;6;330652;4b0737c3f964a520e4f922e3
+138;40.7600867919055 -73.9991837744272;05/02/2013 05:09;309;Tuesday;MTA Bus Operations Depot - Michael J. Quill;Bus Station;Travel & Transport;-1;-1;Snow;6;330658;4dd3fa5e6365c27b0dbeec7d
+138;40.7317954706149 -73.9856725931168;05/02/2013 06:23;383;Tuesday;Momofuku Milk Bar;Dessert Shop;Food;1;9.0;Snow;6;330667;4a257482f964a520557e1fe3
+138;40.7348919181315 -73.9912194013596;05/02/2013 07:50;470;Tuesday;MTA Bus - E 14 St & University Pl (M14A/M14D);Bus Stop;Travel & Transport;-1;-1;Fog;6;330723;4cd78a30a42b236ad848fb08
+138;40.7199733783619 -73.9787578582764;05/02/2013 08:29;509;Tuesday;MTA Bus - Av D & E Houston St (M14D);Bus Stop;Travel & Transport;-1;-1;Fog;6;330760;4eb71d39b8f786e275ef459e
+138;40.7378241119311 -74.0002007782459;06/02/2013 23:49;1429;Wednesday;MTA Subway - 14th St (1/2/3);Metro Station;Travel & Transport;-1;-1;Clear;6;331746;4b1d14e9f964a520af0b24e3
+138;40.7269335438612 -74.0058803558350;07/02/2013 00:23;23;Thursday;Four Points by Sheraton Manhattan SoHo Village;Hotel;Travel & Transport;-1;5.9;Clear;6;331767;4b035c8ff964a520ee4e22e3
+138;40.6887540940881 -73.9806412614152;07/02/2013 04:12;252;Thursday;McDonald's;Fast Food Restaurant;Food;1;4.9;Clear;6;331805;4e7fe4729adf2271f9ace3ab
+138;40.8278390825735 -73.9257681369781;07/02/2013 05:32;332;Thursday;MTA Bus - E 161 St & River Av (Bx6/Bx13);Bus Stop;Travel & Transport;-1;6.2;Clear;6;331814;4e61358581301b932281b4a4
+138;40.8331652006224 -73.9418603427692;07/02/2013 06:00;360;Thursday;Broadway/Nightmare Drive;Home (private);Residence;-1;-1;Clear;6;331823;4ceb39824cdf8eecc44052d1
+138;40.7565061266663 -73.9880275726318;08/02/2013 00:47;47;Friday;MTA Subway - 42nd St/Times Square/Port Authority Bus Terminal (A/C/E/N/Q/R/S/W/1/2/3/7);Metro Station;Travel & Transport;-1;-1;Clouds;6;332616;4b0737c3f964a520e4f922e3
+138;40.6900872257332 -73.9817776229191;08/02/2013 02:44;164;Friday;NYCT Transit Survey Unit;Office;Professional & Other Places;-1;-1;Clouds;6;332658;4c7f04be7fd4ef3b108394a1
+138;40.6899127194574 -73.9815044403076;08/02/2013 03:23;203;Friday;MTA Subway - DeKalb Ave (B/Q/R);Metro Station;Travel & Transport;-1;-1;Clouds;6;332669;4b50e721f964a520db3727e3
+138;40.8155406846180 -73.9584234721819;08/02/2013 05:20;320;Friday;MTA Subway - 125th St (1);Metro Station;Travel & Transport;-1;-1;Clouds;6;332692;4ae6258af964a52013a521e3
+139;40.7565061266663 -73.9880275726318;11/02/2013 00:30;30;Monday;MTA Subway - 42nd St/Times Square/Port Authority Bus Terminal (A/C/E/N/Q/R/S/W/1/2/3/7);Metro Station;Travel & Transport;-1;-1;Clear;6;333271;4b0737c3f964a520e4f922e3
+139;40.6900872257332 -73.9817776229191;11/02/2013 02:47;167;Monday;NYCT Transit Survey Unit;Office;Professional & Other Places;-1;-1;Clouds;6;333299;4c7f04be7fd4ef3b108394a1
+139;40.6904333657826 -73.9852809906006;11/02/2013 03:11;191;Monday;MTA Subway - Hoyt St (2/3);Metro Station;Travel & Transport;-1;-1;Clouds;6;333305;4bae676cf964a520c6ad3be3
+139;40.8155406846180 -73.9584234721819;11/02/2013 04:12;252;Monday;MTA Subway - 125th St (1);Metro Station;Travel & Transport;-1;-1;Clouds;6;333308;4ae6258af964a52013a521e3
+139;40.6900872257332 -73.9817776229191;11/02/2013 20:04;1204;Monday;NYCT Transit Survey Unit;Office;Professional & Other Places;-1;-1;Clouds;6;333815;4c7f04be7fd4ef3b108394a1
+139;40.6880585097395 -73.9804905425158;11/02/2013 20:33;1233;Monday;MTA Subway - Nevins St (2/3/4/5);Metro Station;Travel & Transport;-1;-1;Clouds;6;333840;4ad8fa6ef964a520ac1621e3
+139;40.7795008576189 -73.9558461945179;11/02/2013 21:28;1288;Monday;MTA Subway - 86th St (4/5/6);Metro Station;Travel & Transport;-1;-1;Clouds;6;333875;4b21aee7f964a5201b4024e3
+139;40.8278390825735 -73.9257681369781;12/02/2013 04:15;255;Tuesday;MTA Bus - E 161 St & River Av (Bx6/Bx13);Bus Stop;Travel & Transport;-1;6.2;Clouds;6;333957;4e61358581301b932281b4a4
+139;40.8331652006224 -73.9418603427692;13/02/2013 00:38;38;Wednesday;The Grinnell;Home (private);Residence;-1;-1;Clear;6;334641;4c524854384c76b00080f62a
+139;40.6896120000000 -73.9810960000000;13/02/2013 20:43;1243;Wednesday;King Dragon;Chinese Restaurant;Food;1;-1;Clouds;6;335323;4d9fa1d483f0b1f7ea8c9ec7
+139;40.7085883614824 -73.9910316467285;13/02/2013 21:08;1268;Wednesday;MTA Subway - Manhattan Bridge (B/D/N/Q);Train;Travel & Transport;-1;-1;Clouds;6;335331;4a737bf8f964a52091dc1fe3
+139;40.7540712357943 -73.9844635415781;13/02/2013 23:11;1391;Wednesday;Kinokuniya Bookstore;Bookstore;Shop & Service;-1;9.5;Clouds;6;335379;49ef71e3f964a520b8681fe3
+139;40.7586233891381 -73.9816513608616;14/02/2013 01:14;74;Thursday;MTA Subway - 47th-50th St/Rockefeller Center (B/D/F/M);Metro Station;Travel & Transport;-1;-1;Snow;6;335428;4b0b2275f964a520772d23e3
+139;40.7116349040813 -74.0102935014651;14/02/2013 03:22;202;Thursday;MTA - Church St & Barclay St (BM1/BM2/BM3/BM4);Bus Line;Travel & Transport;-1;-1;Clouds;6;335448;4fed8e67e4b0005d40e0fed2
+139;40.8340978041072 -73.9452672225881;14/02/2013 04:43;283;Thursday;Galaxy Gourmet Deli;Deli / Bodega;Food;1;8.2;Clouds;6;335453;4fe9524ce4b0d971aa120f82

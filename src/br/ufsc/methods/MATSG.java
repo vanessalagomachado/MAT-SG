@@ -86,6 +86,7 @@ public class MATSG {
 
     //V9 - parameters to MAT-SG
     private float threshold_rc; //To define relevant cells 
+    private float rc;
     private float threshold_rv; //To define relevant values in rank values, which values in rank are representative
 
     /**
@@ -135,12 +136,13 @@ public class MATSG {
         this.threshold_rv = threshold_rv;
         //rc is defined as the minimun number of points ( calculated by the % of all points) that should have in each cell
         threshold_rc = rc > 0.0 ? (rc * points.size()) : 2; //If rc is greater than zero sets threshold according with number of points, else sets to 2
-
+        this.rc = rc;
+        
         findCentroid(); //Creates the representative trajectory
 
         //Write the Representative Trajectory to the file
         writeRepresentativeTrajectory("..\\" + directory + filename + "[output] - z" + this.valueZ, ext);
-
+//        System.out.println("Cell Size: "+cellSizeSpace);
     }
 
     /**
@@ -623,6 +625,11 @@ public class MATSG {
                 mxWriter.writeLine(p.toString());
                 mxWriter.flush();
             }
+            
+             mxWriter.writeLine("RT setting infos:");
+             mxWriter.writeLine("|input.T|, CellSize, tauRelevantCell, minPointsRC, tauRepresentativenessValue");
+             mxWriter.writeLine(points.size()+", "+ cellSizeSpace+", "+ rc+", "+threshold_rc+", "+threshold_rv);
+             mxWriter.flush();
 
             mxWriter.close();
         } catch (IOException e) {

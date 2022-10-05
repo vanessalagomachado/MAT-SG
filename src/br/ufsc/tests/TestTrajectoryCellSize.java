@@ -27,10 +27,10 @@ public class TestTrajectoryCellSize {
         dir = "datasets\\Foursquare - user 6\\";
         filename = "Foursquare - user 6 - v2";
         extension = ".csv";
-        int z = 101;
-        if(args.length > 101 ){            
+        int z;
+//        if(args.length > 101 ){            
             z = Integer.parseInt(args[0]);
-        }
+//        }
 
 
         MATSG method = new MATSG();
